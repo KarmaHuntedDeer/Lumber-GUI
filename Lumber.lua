@@ -307,7 +307,6 @@ Teleport_2.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
 Teleport_2.Position = UDim2.new(0.217228457, 0, 0.144044325, 0)
 Teleport_2.Size = UDim2.new(0, 403, 0, 297)
 Teleport_2.Visible = false
-Teleport_2.CanvasPosition = Vector2.new(0, 425)
 
 Spawn.Name = "Spawn"
 Spawn.Parent = Teleport_2
@@ -501,29 +500,13 @@ SkiLodge.TextScaled = true
 SkiLodge.TextSize = 14.000
 SkiLodge.TextWrapped = true
 
--- Locals:
 local MoneyCooldown = false
 local CurrentSlot = game.Players.LocalPlayer:WaitForChild("CurrentSaveSlot").Value
 local ScriptLoadOrSave = false
 local CurrentlySavingOrLoading = game.Players.LocalPlayer:WaitForChild("CurrentlySavingOrLoading")
 
+
 -- Scripts:
-
-local function WWBAY_fake_script() -- Base.Script 
-	local script = Instance.new('Script', Base)
-
-	local mainframe = script.Parent.Parent
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.MouseButton1Click == true then
-			mainframe.Base.Visible = true
-			mainframe.Axes.Visible = false
-			mainframe.Player.Visible = false
-			mainframe.Sorter.Visible = false
-			mainframe.Teleport.Visible = false
-		end
-	end)
-end
 
 local function CheckIfSlotAvailable(Slot)
 	for a,b in pairs(game.ReplicatedStorage.LoadSaveRequests.GetMetaData:InvokeServer(game.Players.LocalPlayer)) do
@@ -556,9 +539,24 @@ local function SendNotification(Title,Text,Duration) -- Sends Notification in th
 	})
 end
 
-coroutine.wrap(WWBAY_fake_script)()
-local function YSRBAD_fake_script() -- Axes.Script 
-	local script = Instance.new('Script', Axes)
+local function WWSVPO_fake_script() -- Base.LocalScript 
+	local script = Instance.new('LocalScript', Base)
+
+	local mainframe = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.MouseButton1Click == true then
+			mainframe.Base.Visible = true
+			mainframe.Axes.Visible = false
+			mainframe.Player.Visible = false
+			mainframe.Sorter.Visible = false
+			mainframe.Teleport.Visible = false
+		end
+	end)
+end
+coroutine.wrap(WWSVPO_fake_script)()
+local function WNGVCF_fake_script() -- Axes.LocalScript 
+	local script = Instance.new('LocalScript', Axes)
 
 	local mainframe = script.Parent.Parent
 	
@@ -572,9 +570,9 @@ local function YSRBAD_fake_script() -- Axes.Script
 		end
 	end)
 end
-coroutine.wrap(YSRBAD_fake_script)()
-local function TELIPL_fake_script() -- Sorter.Script 
-	local script = Instance.new('Script', Sorter)
+coroutine.wrap(WNGVCF_fake_script)()
+local function QAVTNP_fake_script() -- Sorter.LocalScript 
+	local script = Instance.new('LocalScript', Sorter)
 
 	local mainframe = script.Parent.Parent
 	
@@ -588,9 +586,9 @@ local function TELIPL_fake_script() -- Sorter.Script
 		end
 	end)
 end
-coroutine.wrap(TELIPL_fake_script)()
-local function HRHMIQ_fake_script() -- Teleport.Script 
-	local script = Instance.new('Script', Teleport)
+coroutine.wrap(QAVTNP_fake_script)()
+local function HQPN_fake_script() -- Teleport.LocalScript 
+	local script = Instance.new('LocalScript', Teleport)
 
 	local mainframe = script.Parent.Parent
 	
@@ -604,9 +602,9 @@ local function HRHMIQ_fake_script() -- Teleport.Script
 		end
 	end)
 end
-coroutine.wrap(HRHMIQ_fake_script)()
-local function KDRIOL_fake_script() -- Player.Script 
-	local script = Instance.new('Script', Player)
+coroutine.wrap(HQPN_fake_script)()
+local function WGFYNB_fake_script() -- Player.LocalScript 
+	local script = Instance.new('LocalScript', Player)
 
 	local mainframe = script.Parent.Parent
 	
@@ -620,8 +618,8 @@ local function KDRIOL_fake_script() -- Player.Script
 		end
 	end)
 end
-coroutine.wrap(KDRIOL_fake_script)()
-local function ECDBKOD_fake_script() -- Frame.LocalScript 
+coroutine.wrap(WGFYNB_fake_script)()
+local function TQJI_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local userinput = game:GetService("UserInputService")
@@ -657,8 +655,8 @@ local function ECDBKOD_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ECDBKOD_fake_script)()
-local function GBPCKVC_fake_script() -- TextButton.Script 
+coroutine.wrap(TQJI_fake_script)()
+local function ALXWWT_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -703,8 +701,8 @@ local function GBPCKVC_fake_script() -- TextButton.Script
 		end
 	end)
 end
-coroutine.wrap(GBPCKVC_fake_script)()
-local function TEEFBA_fake_script() -- SaveSlot.Script 
+coroutine.wrap(ALXWWT_fake_script)()
+local function LZSXAXG_fake_script() -- SaveSlot.Script 
 	local script = Instance.new('Script', SaveSlot)
 
 	script.Parent.MouseButton1Down:connect(function() --Saves the slot that you want
@@ -730,8 +728,8 @@ local function TEEFBA_fake_script() -- SaveSlot.Script
 		end
 	end)
 end
-coroutine.wrap(TEEFBA_fake_script)()
-local function TQLLONX_fake_script() -- TextButton_2.Script 
+coroutine.wrap(LZSXAXG_fake_script)()
+local function WWAK_fake_script() -- TextButton_2.Script 
 	local script = Instance.new('Script', TextButton_2)
 
 	script.Parent.MouseButton1Down:connect(function() --Loads the slot you want
@@ -756,8 +754,8 @@ local function TQLLONX_fake_script() -- TextButton_2.Script
 		ScriptLoadOrSave = false
 	end)
 end
-coroutine.wrap(TQLLONX_fake_script)()
-local function LYUKUTV_fake_script() -- TextButton_3.Script 
+coroutine.wrap(WWAK_fake_script)()
+local function QOTAHOF_fake_script() -- TextButton_3.Script 
 	local script = Instance.new('Script', TextButton_3)
 
 	script.Parent.MouseButton1Down:connect(function() --Sends the money and will come back after around 2 mins
@@ -773,8 +771,8 @@ local function LYUKUTV_fake_script() -- TextButton_3.Script
 		end
 	end)
 end
-coroutine.wrap(LYUKUTV_fake_script)()
-local function TNNX_fake_script() -- Store.Script 
+coroutine.wrap(QOTAHOF_fake_script)()
+local function DDBN_fake_script() -- Store.Script 
 	local script = Instance.new('Script', Store)
 
 	script.Parent.MouseButton1Down:connect(function() --Stores the Axes somewhere so you can restore them later
@@ -788,8 +786,8 @@ local function TNNX_fake_script() -- Store.Script
 		SendNotification("Store Notification", "Stored "..Amount.." Axes, you can restore them later", 2)
 	end)
 end
-coroutine.wrap(TNNX_fake_script)()
-local function MOMBJ_fake_script() -- Restore.Script 
+coroutine.wrap(DDBN_fake_script)()
+local function RADLXM_fake_script() -- Restore.Script 
 	local script = Instance.new('Script', Restore)
 
 	script.Parent.MouseButton1Down:connect(function() --Restores the axes that you stored with the Store function
@@ -803,8 +801,8 @@ local function MOMBJ_fake_script() -- Restore.Script
 		SendNotification("Restore Notification", "Restored "..Amount.." Axes that you Stored", 2)
 	end)
 end
-coroutine.wrap(MOMBJ_fake_script)()
-local function KUWAC_fake_script() -- CountAxes.Script 
+coroutine.wrap(RADLXM_fake_script)()
+local function YQJVPPN_fake_script() -- CountAxes.Script 
 	local script = Instance.new('Script', CountAxes)
 
 	script.Parent.MouseButton1Down:connect(function() --Counts Axes in your Backpack (Equiped Axes dont Count)
@@ -817,8 +815,8 @@ local function KUWAC_fake_script() -- CountAxes.Script
 		SendNotification("Axe Amount", "You have "..Amount.." Axes in your Backpack",2)
 	end)
 end
-coroutine.wrap(KUWAC_fake_script)()
-local function PMZZ_fake_script() -- DropAxes.Script 
+coroutine.wrap(YQJVPPN_fake_script)()
+local function RQWMYHE_fake_script() -- DropAxes.Script 
 	local script = Instance.new('Script', DropAxes)
 
 	script.Parent.MouseButton1Down:connect(function() --Drops all your Axes
@@ -832,124 +830,124 @@ local function PMZZ_fake_script() -- DropAxes.Script
 		SendNotification("Axe Dropped", "Dropped "..Amount.." Axes from your Backpack",5)
 	end)
 end
-coroutine.wrap(PMZZ_fake_script)()
-local function CFFWUBP_fake_script() -- Spawn.LocalScript 
+coroutine.wrap(RQWMYHE_fake_script)()
+local function LQKFJZ_fake_script() -- Spawn.LocalScript 
 	local script = Instance.new('LocalScript', Spawn)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(155,3,74))
 	end)
 end
-coroutine.wrap(CFFWUBP_fake_script)()
-local function ZCADAWQ_fake_script() -- Shop1.LocalScript 
+coroutine.wrap(LQKFJZ_fake_script)()
+local function FMBSE_fake_script() -- Shop1.LocalScript 
 	local script = Instance.new('LocalScript', Shop1)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(265,3,57))
 	end)
 end
-coroutine.wrap(ZCADAWQ_fake_script)()
-local function HKHYXX_fake_script() -- Shop2.LocalScript 
+coroutine.wrap(FMBSE_fake_script)()
+local function ASYIOJ_fake_script() -- Shop2.LocalScript 
 	local script = Instance.new('LocalScript', Shop2)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(491, 3, -1720))
 	end)
 end
-coroutine.wrap(HKHYXX_fake_script)()
-local function AHFLJAO_fake_script() -- Shop3.LocalScript 
+coroutine.wrap(ASYIOJ_fake_script)()
+local function UZAIKT_fake_script() -- Shop3.LocalScript 
 	local script = Instance.new('LocalScript', Shop3)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(509, 3, -1463))
 	end)
 end
-coroutine.wrap(AHFLJAO_fake_script)()
-local function EFRDE_fake_script() -- Shop4.LocalScript 
+coroutine.wrap(UZAIKT_fake_script)()
+local function QBZTSVJ_fake_script() -- Shop4.LocalScript 
 	local script = Instance.new('LocalScript', Shop4)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(4607,7.5,-798))
 	end)
 end
-coroutine.wrap(EFRDE_fake_script)()
-local function RIHZA_fake_script() -- Shop5.LocalScript 
+coroutine.wrap(QBZTSVJ_fake_script)()
+local function HZPK_fake_script() -- Shop5.LocalScript 
 	local script = Instance.new('LocalScript', Shop5)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(260, 8, -2542))
 	end)
 end
-coroutine.wrap(RIHZA_fake_script)()
-local function JCHO_fake_script() -- Shop6.LocalScript 
+coroutine.wrap(HZPK_fake_script)()
+local function OOFCW_fake_script() -- Shop6.LocalScript 
 	local script = Instance.new('LocalScript', Shop6)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(5207, -166, 719))
 	end)
 end
-coroutine.wrap(JCHO_fake_script)()
-local function RRTL_fake_script() -- Swamp.LocalScript 
+coroutine.wrap(OOFCW_fake_script)()
+local function CHZYMVM_fake_script() -- Swamp.LocalScript 
 	local script = Instance.new('LocalScript', Swamp)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1209,132,-801))
 	end)
 end
-coroutine.wrap(RRTL_fake_script)()
-local function ETPTWWI_fake_script() -- Palm.LocalScript 
+coroutine.wrap(CHZYMVM_fake_script)()
+local function VDTJ_fake_script() -- Palm.LocalScript 
 	local script = Instance.new('LocalScript', Palm)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2549, -5, -42))
 	end)
 end
-coroutine.wrap(ETPTWWI_fake_script)()
-local function FDFJAFE_fake_script() -- Cave.LocalScript 
+coroutine.wrap(VDTJ_fake_script)()
+local function UUQBWW_fake_script() -- Cave.LocalScript 
 	local script = Instance.new('LocalScript', Cave)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3581,-179,430))
 	end)
 end
-coroutine.wrap(FDFJAFE_fake_script)()
-local function XBWGX_fake_script() -- Golden.LocalScript 
+coroutine.wrap(UUQBWW_fake_script)()
+local function HNGICV_fake_script() -- Golden.LocalScript 
 	local script = Instance.new('LocalScript', Golden)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1049,-5.9 ,-934.7))
 	end)
 end
-coroutine.wrap(XBWGX_fake_script)()
-local function GIHF_fake_script() -- Volcano.LocalScript 
+coroutine.wrap(HNGICV_fake_script)()
+local function ESTYCMJ_fake_script() -- Volcano.LocalScript 
 	local script = Instance.new('LocalScript', Volcano)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1585,622,1140))
 	end)
 end
-coroutine.wrap(GIHF_fake_script)()
-local function OGAQ_fake_script() -- IceTree.LocalScript 
+coroutine.wrap(ESTYCMJ_fake_script)()
+local function SIXAXN_fake_script() -- IceTree.LocalScript 
 	local script = Instance.new('LocalScript', IceTree)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1505.7,412.4 ,3253))
 	end)
 end
-coroutine.wrap(OGAQ_fake_script)()
-local function AXEO_fake_script() -- EndTimes.LocalScript 
+coroutine.wrap(SIXAXN_fake_script)()
+local function EWTQBC_fake_script() -- EndTimes.LocalScript 
 	local script = Instance.new('LocalScript', EndTimes)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(113, -214, -951))
 	end)
 end
-coroutine.wrap(AXEO_fake_script)()
-local function DLACQR_fake_script() -- Den.LocalScript 
+coroutine.wrap(EWTQBC_fake_script)()
+local function QFXMFD_fake_script() -- Den.LocalScript 
 	local script = Instance.new('LocalScript', Den)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(331, 45, 1941))
 	end)
 end
-coroutine.wrap(DLACQR_fake_script)()
+coroutine.wrap(QFXMFD_fake_script)()
