@@ -20,16 +20,24 @@ local TextButton = Instance.new("TextButton")
 local SaveSlot = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
+local TpAllPlanks = Instance.new("TextButton")
+local GreywoodStart = Instance.new("TextButton")
+local TPWood = Instance.new("TextButton")
+local Duper = Instance.new("TextLabel")
+local Dupe = Instance.new("TextButton")
+local DupingText1 = Instance.new("TextLabel")
 local Axes_2 = Instance.new("Frame")
 local Store = Instance.new("TextButton")
 local Restore = Instance.new("TextButton")
 local CountAxes = Instance.new("TextButton")
 local DropAxes = Instance.new("TextButton")
+local DupeAxes = Instance.new("TextButton")
 local Sorter_2 = Instance.new("Frame")
 local Player_2 = Instance.new("Frame")
 local WalkSpeed = Instance.new("TextButton")
 local JumpPower = Instance.new("TextButton")
 local HardDragger = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
 local Teleport_2 = Instance.new("ScrollingFrame")
 local Spawn = Instance.new("TextButton")
 local Shop1 = Instance.new("TextButton")
@@ -149,7 +157,6 @@ Base_2.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
 Base_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Base_2.Position = UDim2.new(0.217228457, 0, 0.144044325, 0)
 Base_2.Size = UDim2.new(0, 403, 0, 289)
-Base_2.Visible = false
 
 TextButton.Parent = Base_2
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -195,6 +202,76 @@ TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.TextScaled = true
 TextButton_3.TextSize = 14.000
 TextButton_3.TextWrapped = true
+
+TpAllPlanks.Name = "TpAllPlanks"
+TpAllPlanks.Parent = Base_2
+TpAllPlanks.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TpAllPlanks.Position = UDim2.new(0.374689817, 0, 0.314878881, 0)
+TpAllPlanks.Size = UDim2.new(0, 100, 0, 50)
+TpAllPlanks.Font = Enum.Font.SourceSans
+TpAllPlanks.Text = "TP Planks"
+TpAllPlanks.TextColor3 = Color3.fromRGB(0, 0, 0)
+TpAllPlanks.TextScaled = true
+TpAllPlanks.TextSize = 14.000
+TpAllPlanks.TextWrapped = true
+
+GreywoodStart.Name = "GreywoodStart"
+GreywoodStart.Parent = Base_2
+GreywoodStart.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GreywoodStart.Position = UDim2.new(0.68982625, 0, 0.314878881, 0)
+GreywoodStart.Size = UDim2.new(0, 100, 0, 50)
+GreywoodStart.Font = Enum.Font.SourceSans
+GreywoodStart.Text = "Grey Wood"
+GreywoodStart.TextColor3 = Color3.fromRGB(0, 0, 0)
+GreywoodStart.TextScaled = true
+GreywoodStart.TextSize = 14.000
+GreywoodStart.TextWrapped = true
+
+TPWood.Name = "TPWood"
+TPWood.Parent = Base_2
+TPWood.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPWood.Position = UDim2.new(0.0545905232, 0, 0.543252647, 0)
+TPWood.Size = UDim2.new(0, 100, 0, 50)
+TPWood.Font = Enum.Font.SourceSans
+TPWood.Text = "TP Wood"
+TPWood.TextColor3 = Color3.fromRGB(0, 0, 0)
+TPWood.TextScaled = true
+TPWood.TextSize = 14.000
+TPWood.TextWrapped = true
+
+Duper.Name = "Duper"
+Duper.Parent = Base_2
+Duper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Duper.Position = UDim2.new(0.71464026, 0, 0.75778538, 0)
+Duper.Size = UDim2.new(0, 90, 0, 46)
+Duper.Font = Enum.Font.SourceSans
+Duper.Text = "Duping: Not Active"
+Duper.TextColor3 = Color3.fromRGB(0, 0, 0)
+Duper.TextSize = 14.000
+
+Dupe.Name = "Dupe"
+Dupe.Parent = Base_2
+Dupe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dupe.Position = UDim2.new(0.0521091521, 0, 0.743944705, 0)
+Dupe.Size = UDim2.new(0, 100, 0, 50)
+Dupe.Font = Enum.Font.SourceSans
+Dupe.Text = "Dupe"
+Dupe.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dupe.TextScaled = true
+Dupe.TextSize = 14.000
+Dupe.TextWrapped = true
+
+DupingText1.Name = "DupingText1"
+DupingText1.Parent = Base_2
+DupingText1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DupingText1.Position = UDim2.new(0.374689817, 0, 0.543252528, 0)
+DupingText1.Size = UDim2.new(0, 100, 0, 108)
+DupingText1.Font = Enum.Font.SourceSans
+DupingText1.Text = "Duping: Slot Active/Not Active"
+DupingText1.TextColor3 = Color3.fromRGB(0, 0, 0)
+DupingText1.TextScaled = true
+DupingText1.TextSize = 14.000
+DupingText1.TextWrapped = true
 
 Axes_2.Name = "Axes"
 Axes_2.Parent = Frame
@@ -251,6 +328,18 @@ DropAxes.TextScaled = true
 DropAxes.TextSize = 14.000
 DropAxes.TextWrapped = true
 
+DupeAxes.Name = "DupeAxes"
+DupeAxes.Parent = Axes_2
+DupeAxes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DupeAxes.Position = UDim2.new(0.374689847, 0, 0.314878881, 0)
+DupeAxes.Size = UDim2.new(0, 100, 0, 50)
+DupeAxes.Font = Enum.Font.SourceSans
+DupeAxes.Text = "Dupe Axes (Once)"
+DupeAxes.TextColor3 = Color3.fromRGB(0, 0, 0)
+DupeAxes.TextScaled = true
+DupeAxes.TextSize = 14.000
+DupeAxes.TextWrapped = true
+
 Sorter_2.Name = "Sorter"
 Sorter_2.Parent = Frame
 Sorter_2.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
@@ -300,6 +389,18 @@ HardDragger.TextColor3 = Color3.fromRGB(0, 0, 0)
 HardDragger.TextScaled = true
 HardDragger.TextSize = 14.000
 HardDragger.TextWrapped = true
+
+Fly.Name = "Fly"
+Fly.Parent = Player_2
+Fly.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+Fly.Position = UDim2.new(0.0645161271, 0, 0.314878881, 0)
+Fly.Size = UDim2.new(0, 140, 0, 50)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
 
 Teleport_2.Name = "Teleport"
 Teleport_2.Parent = Frame
@@ -539,7 +640,9 @@ local function SendNotification(Title,Text,Duration) -- Sends Notification in th
 	})
 end
 
-local function SKPDA_fake_script() -- Base.LocalScript 
+-- Scripts:
+
+local function OOUVLWP_fake_script() -- Base.LocalScript 
 	local script = Instance.new('LocalScript', Base)
 
 	local mainframe = script.Parent.Parent.Parent
@@ -552,8 +655,8 @@ local function SKPDA_fake_script() -- Base.LocalScript
 		mainframe.Teleport.Visible = false
 	end)
 end
-coroutine.wrap(SKPDA_fake_script)()
-local function HUZDUF_fake_script() -- Axes.LocalScript 
+coroutine.wrap(OOUVLWP_fake_script)()
+local function EBCVWLM_fake_script() -- Axes.LocalScript 
 	local script = Instance.new('LocalScript', Axes)
 
 	local mainframe = script.Parent.Parent.Parent
@@ -566,8 +669,8 @@ local function HUZDUF_fake_script() -- Axes.LocalScript
 			mainframe.Teleport.Visible = false
 	end)
 end
-coroutine.wrap(HUZDUF_fake_script)()
-local function TYESAX_fake_script() -- Sorter.LocalScript 
+coroutine.wrap(EBCVWLM_fake_script)()
+local function FBVGKA_fake_script() -- Sorter.LocalScript 
 	local script = Instance.new('LocalScript', Sorter)
 
 	local mainframe = script.Parent.Parent.Parent
@@ -580,8 +683,8 @@ local function TYESAX_fake_script() -- Sorter.LocalScript
 			mainframe.Teleport.Visible = false
 	end)
 end
-coroutine.wrap(TYESAX_fake_script)()
-local function MHAEQF_fake_script() -- Teleport.LocalScript 
+coroutine.wrap(FBVGKA_fake_script)()
+local function NCAP_fake_script() -- Teleport.LocalScript 
 	local script = Instance.new('LocalScript', Teleport)
 
 	local mainframe = script.Parent.Parent.Parent
@@ -594,8 +697,8 @@ local function MHAEQF_fake_script() -- Teleport.LocalScript
 			mainframe.Teleport.Visible = true
 	end)
 end
-coroutine.wrap(MHAEQF_fake_script)()
-local function QTJLII_fake_script() -- Player.LocalScript 
+coroutine.wrap(NCAP_fake_script)()
+local function DAAC_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	local mainframe = script.Parent.Parent.Parent
@@ -608,8 +711,8 @@ local function QTJLII_fake_script() -- Player.LocalScript
 		mainframe.Teleport.Visible = false
 	end)
 end
-coroutine.wrap(QTJLII_fake_script)()
-local function RYJT_fake_script() -- Frame.LocalScript 
+coroutine.wrap(DAAC_fake_script)()
+local function TFTA_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local userinput = game:GetService("UserInputService")
@@ -645,8 +748,8 @@ local function RYJT_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RYJT_fake_script)()
-local function JUDSHRN_fake_script() -- TextButton.Script 
+coroutine.wrap(TFTA_fake_script)()
+local function GPFRRG_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -691,8 +794,8 @@ local function JUDSHRN_fake_script() -- TextButton.Script
 		end
 	end)
 end
-coroutine.wrap(JUDSHRN_fake_script)()
-local function NAFB_fake_script() -- SaveSlot.Script 
+coroutine.wrap(GPFRRG_fake_script)()
+local function PEOI_fake_script() -- SaveSlot.Script 
 	local script = Instance.new('Script', SaveSlot)
 
 	script.Parent.MouseButton1Down:connect(function() --Saves the slot that you want
@@ -718,8 +821,8 @@ local function NAFB_fake_script() -- SaveSlot.Script
 		end
 	end)
 end
-coroutine.wrap(NAFB_fake_script)()
-local function APGAR_fake_script() -- TextButton_2.Script 
+coroutine.wrap(PEOI_fake_script)()
+local function RUAPFYX_fake_script() -- TextButton_2.Script 
 	local script = Instance.new('Script', TextButton_2)
 
 	script.Parent.MouseButton1Down:connect(function() --Loads the slot you want
@@ -744,8 +847,8 @@ local function APGAR_fake_script() -- TextButton_2.Script
 		ScriptLoadOrSave = false
 	end)
 end
-coroutine.wrap(APGAR_fake_script)()
-local function XAPCF_fake_script() -- TextButton_3.Script 
+coroutine.wrap(RUAPFYX_fake_script)()
+local function MTEH_fake_script() -- TextButton_3.Script 
 	local script = Instance.new('Script', TextButton_3)
 
 	script.Parent.MouseButton1Down:connect(function() --Sends the money and will come back after around 2 mins
@@ -761,8 +864,184 @@ local function XAPCF_fake_script() -- TextButton_3.Script
 		end
 	end)
 end
-coroutine.wrap(XAPCF_fake_script)()
-local function SBDX_fake_script() -- Store.Script 
+coroutine.wrap(MTEH_fake_script)()
+local function HVRFS_fake_script() -- TpAllPlanks.Script 
+	local script = Instance.new('Script', TpAllPlanks)
+
+	checkplanks = false
+	local WoodPlanks={}
+	local ProcessedWoodList = LT2GUI.MainFrame.MenuFrame.PlankFrame.ProcessedWoodList
+	
+	function UpdatePlanks()
+		local inc = 0
+		WoodPlanks={}
+		for i,v in pairs(game.Workspace.PlayerModels:GetChildren()) do
+			pcall(function()
+				if v.Name=="Plank" and v.Owner.Value==game.Players.LocalPlayer then
+					if v:FindFirstChild("TreeClass") and WoodPlanks[v.TreeClass.Value] then
+						WoodPlanks[v.TreeClass.Value]=WoodPlanks[v.TreeClass.Value]
+						WoodPlanks[v.TreeClass.Value]["Wood"][v]=v
+					elseif v:FindFirstChild("TreeClass") then
+						WoodPlanks[v.TreeClass.Value]={Wood={v.WoodSection}}
+					end
+				end
+			end)
+		end
+	end
+	
+	function UpdateMovePlanks()
+		checkplanks = true
+		local inc=0
+		UpdatePlanks()
+		ProcessedWoodList:ClearAllChildren()
+		for i,v in pairs(WoodPlanks) do
+			ProcessedWoodList.CanvasSize=UDim2.new(0,0,0,25*inc)
+			local TPButton=Create("TextButton",{Parent=ProcessedWoodList,Size=UDim2.new(0,147,0,20),Position=UDim2.new(0,5,0,25*inc),Text=" "..i,ZIndex=3,BackgroundColor3 = Color3.new(0.2, 0.2, 0.2),Font = Enum.Font.Fantasy,TextColor3 = Color3.new(1, 1, 1),TextSize = 16,BorderColor3 = Color3.new(0, 1, 0)})
+			TPButton.MouseButton1Click:Connect(function()
+				sendNotice = game.ReplicatedStorage.Notices.SendUserNotice
+				sendNotice:Fire("Click where you want the Planks to TP to")
+				local ButtonPress
+				ButtonPress = game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
+					Square = game.Players.LocalPlayer:GetMouse().Target
+					if (Square.Name == "OriginSquare" or Square.Name == "Square") then
+						ButtonPress:Disconnect()
+						for _, Plank in pairs(game.Workspace.PlayerModels:GetChildren()) do
+							if Plank.Name=="Plank" and Plank:FindFirstChild("TreeClass") then
+								if Plank.TreeClass.Value == i and Plank.Owner.Value == game.Players.LocalPlayer then
+									Plank:MoveTo(Square.Position)
+									for i=1,100 do
+										game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(Plank)
+									end
+								end
+							end
+						end
+					end
+				end)
+			end)
+			inc=inc+1
+		end
+		inc=0
+	end
+	
+	TpAllPlanks.MouseButton1Click:Connect(function()
+		for _, Plank in pairs(game.Workspace.PlayerModels:GetChildren()) do
+			if Plank.Name=="Plank" and Plank:findFirstChild("Owner") then
+				if Plank.Owner.Value == game.Players.LocalPlayer then
+					sendNotice = game.ReplicatedStorage.Notices.SendUserNotice
+					sendNotice:Fire("Click where you want ALL the Planks to TP to")
+					local ButtonPress
+					ButtonPress = game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
+						Square = game.Players.LocalPlayer:GetMouse().Target
+						if (Square.Name == "OriginSquare" or Square.Name == "Square") then
+							ButtonPress:Disconnect()
+							Plank:MoveTo(Square.Position)
+							for i=1,100 do
+								game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(Plank)
+							end
+						end
+					end)
+				end
+			end
+		end
+	end)
+	
+	if not checkplanks then
+		UpdateMovePlanks()
+	end
+	
+	game.Workspace.PlayerModels.ChildAdded:connect(function(Item)
+		if Item:FindFirstChild("Owner") and Item.Owner.Value == game.Players.LocalPlayer and Item:FindFirstChild("TreeClass") then
+			UpdateMovePlanks()
+		end
+	end)
+	
+	game.Workspace.PlayerModels.ChildRemoved:connect(function(Item)
+		if Item:FindFirstChild("Owner") and Item.Owner.Value == game.Players.LocalPlayer and Item:FindFirstChild("TreeClass") then
+			UpdateMovePlanks()
+		end
+	end)
+end
+coroutine.wrap(HVRFS_fake_script)()
+local function HOXFS_fake_script() -- GreywoodStart.Script 
+	local script = Instance.new('Script', GreywoodStart)
+
+	GreywoodStart.MouseButton1Down:Connect(function()
+		if GreyStart == "Nothing" then
+			GreyStart = "On"
+			GreywoodStart.BackgroundColor3 = Color3.new(0, 0.5, 0)
+			GreywoodStart.Text = "Stop"
+			for i,v in next,workspace.PlayerModels:GetChildren() do
+				if v:FindFirstChild("Type") then
+					if v.Type.Value == "Blueprint" then
+						v.Type.Value = "Structure"
+					end
+				end
+			end
+		else
+			GreyStart = "Nothing"
+			GreywoodStart.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+			GreywoodStart.Text = "Start"
+			for i,v in next,workspace.PlayerModels:GetChildren() do
+				if v:FindFirstChild("Type") then
+					if v.Type.Value == "Structure" then
+						v.Type.Value = "Blueprint"
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(HOXFS_fake_script)()
+local function TBTFPF_fake_script() -- TPWood.Script 
+	local script = Instance.new('Script', TPWood)
+
+	TPWood.MouseButton1Click:Connect(function()
+		for _, Log in pairs(game.Workspace.LogModels:GetChildren()) do
+			if Log.Name:sub(1, 6) == "Loose_" and Log:findFirstChild("Owner") then
+				if Log.Owner.Value == game.Players.LocalPlayer then
+					Log:MoveTo(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 20, 0))
+					for i=1,100 do
+						game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(Log)
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(TBTFPF_fake_script)()
+local function VDXY_fake_script() -- Dupe.Script 
+	local script = Instance.new('Script', Dupe)
+
+	Dupe.MouseButton1Down:connect(function()
+		local plr = game:GetService("Players").LocalPlayer
+		slot = plr.CurrentSaveSlot
+		if Option == false then
+			if slot.Value == -1 then
+				Option = true
+				slot.RobloxLocked = true
+				Duper.Text = "Duping Active"
+				Duper.BackgroundColor3 = Color3.new(0, 0.5, 0)
+				Duper.TextColor3 = Color3.new(1, 1, 1)
+				Dupe.BackgroundColor3 = Color3.new(0, 0.5, 0)
+				Dupe.TextColor3 = Color3.new(1, 1, 1)
+				Dupe.Text = "Duping"
+				DupingText1.Text = "Loaded Slot Will NOT Save\n\nMake sure to reload your slot after duping to make sure you get your items back (If you leave before reloading all your changes will be saved)."
+			end
+		else
+			Option = false
+			slot.RobloxLocked = false
+			Duper.Text = "Item Duping"
+			Duper.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+			Duper.TextColor3 = Color3.new(1, 1, 1)
+			Dupe.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+			Dupe.TextColor3 = Color3.new(1, 1, 1)
+			Dupe.Text = "Dupe"
+			DupingText1.Text = "Loaded Slot Will Save"
+		end
+	end)
+end
+coroutine.wrap(VDXY_fake_script)()
+local function QCDBPEK_fake_script() -- Store.Script 
 	local script = Instance.new('Script', Store)
 
 	script.Parent.MouseButton1Down:connect(function() --Stores the Axes somewhere so you can restore them later
@@ -776,8 +1055,8 @@ local function SBDX_fake_script() -- Store.Script
 		SendNotification("Store Notification", "Stored "..Amount.." Axes, you can restore them later", 2)
 	end)
 end
-coroutine.wrap(SBDX_fake_script)()
-local function EOFBBX_fake_script() -- Restore.Script 
+coroutine.wrap(QCDBPEK_fake_script)()
+local function BIIZR_fake_script() -- Restore.Script 
 	local script = Instance.new('Script', Restore)
 
 	script.Parent.MouseButton1Down:connect(function() --Restores the axes that you stored with the Store function
@@ -791,8 +1070,8 @@ local function EOFBBX_fake_script() -- Restore.Script
 		SendNotification("Restore Notification", "Restored "..Amount.." Axes that you Stored", 2)
 	end)
 end
-coroutine.wrap(EOFBBX_fake_script)()
-local function FZGAU_fake_script() -- CountAxes.Script 
+coroutine.wrap(BIIZR_fake_script)()
+local function AWNOJ_fake_script() -- CountAxes.Script 
 	local script = Instance.new('Script', CountAxes)
 
 	script.Parent.MouseButton1Down:connect(function() --Counts Axes in your Backpack (Equiped Axes dont Count)
@@ -805,8 +1084,8 @@ local function FZGAU_fake_script() -- CountAxes.Script
 		SendNotification("Axe Amount", "You have "..Amount.." Axes in your Backpack",2)
 	end)
 end
-coroutine.wrap(FZGAU_fake_script)()
-local function UUOF_fake_script() -- DropAxes.Script 
+coroutine.wrap(AWNOJ_fake_script)()
+local function LPZG_fake_script() -- DropAxes.Script 
 	local script = Instance.new('Script', DropAxes)
 
 	script.Parent.MouseButton1Down:connect(function() --Drops all your Axes
@@ -820,124 +1099,398 @@ local function UUOF_fake_script() -- DropAxes.Script
 		SendNotification("Axe Dropped", "Dropped "..Amount.." Axes from your Backpack",5)
 	end)
 end
-coroutine.wrap(UUOF_fake_script)()
-local function ENZC_fake_script() -- Spawn.LocalScript 
+coroutine.wrap(LPZG_fake_script)()
+local function JTAD_fake_script() -- DupeAxes.Script 
+	local script = Instance.new('Script', DupeAxes)
+
+	local plr = game:service'Players'.LocalPlayer
+	
+	script.Parent.Activated:Connect(function()
+		function SafeRespawn()
+			plr.Character.Head:Destroy()
+		end
+	
+		function Dupe()
+			SafeRespawn()
+			for i,v in pairs(plr.Backpack:GetChildren()) do
+				if v.Name == "Tool" then
+					game:GetService("ReplicatedStorage").Interaction.ClientInteracted:FireServer(v,"Drop tool",plr.Character.Torso.CFrame * CFrame.new(0,5,0))
+				end
+			end
+		end
+	
+		Dupe()
+	end)
+end
+coroutine.wrap(JTAD_fake_script)()
+local function BOOTJIE_fake_script() -- Fly.Script 
+	local script = Instance.new('Script', Fly)
+
+	--- Fly ---
+	
+	function fly()
+		for i,v in pairs(script:GetChildren()) do
+			pcall(function() v.Value = "" end)
+			game:GetService("Debris"):AddItem(v,.1)
+		end
+	
+		function weld(p0,p1,c0,c1,par)
+			local w = Instance.new("Weld",p0 or par)
+			w.Part0 = p0
+			w.Part1 = p1
+			w.C0 = c0 or CFrame.new()
+			w.C1 = c1 or CFrame.new()
+			return w
+		end
+	
+		local motors = {}
+	
+		function motor(p0,p1,c0,c1,des,vel,par)
+			local w = Instance.new("Motor6D",p0 or par)
+			w.Part0 = p0
+			w.Part1 = p1
+			w.C0 = c0 or CFrame.new()
+			w.C1 = c1 or CFrame.new()
+			w.MaxVelocity = tonumber(vel) or .05
+			w.DesiredAngle = tonumber(des) or 0
+			return w
+		end
+	
+		function lerp(a,b,c)
+			return a+(b-a)*c
+		end
+	
+		function clerp(c1,c2,al)
+			local com1 = {c1.X,c1.Y,c1.Z,c1:toEulerAnglesXYZ()}
+			local com2 = {c2.X,c2.Y,c2.Z,c2:toEulerAnglesXYZ()}
+			for i,v in pairs(com1) do
+				com1[i] = lerp(v,com2[i],al)
+			end
+			return CFrame.new(com1[1],com1[2],com1[3]) * CFrame.Angles(select(4,unpack(com1)))
+		end
+	
+		function ccomplerp(c1,c2,al)
+			local com1 = {c1:components()}
+			local com2 = {c2:components()}
+			for i,v in pairs(com1) do
+				com1[i] = lerp(v,com2[i],al)
+			end
+			return CFrame.new(unpack(com1))
+		end
+	
+		function tickwave(time,length,offset)
+			return (math.abs((tick()+(offset or 0))%time-time/2)*2-time/2)/time/2*length
+		end
+	
+		function invcol(c)
+			c = c.Color
+			return BrickColor.new(Color3.new(1-c.b,1-c.g,1-c.r))
+		end
+		local oc = oc or function(...) return ... end
+		local plr = game.Players.LocalPlayer
+		local char = plr.Character
+		local tor = char.Torso
+		local hum = char.Humanoid
+		hum.PlatformStand = false
+		pcall(function()
+			char.Wings:Destroy()
+		end)
+		pcall(function()
+			char.Angel:Destroy() -- hat
+		end)
+		local mod = Instance.new("Model",char)
+		mod.Name = "Wings"
+		local special = {
+			[game.Players.LocalPlayer.Name] = {"Black","Bright red",.5,0,false,Color3.new(1,0,0),Color3.new(0,0,0)},
+		}
+		local topcolor = BrickColor.new("Really black")
+		local feacolor = BrickColor.new("Black")
+		local ptrans = 0
+		local pref = 0
+		local fire = true
+		local fmcol = Color3.new()
+		local fscol = Color3.new()
+		local spec = special[plr.Name:lower()]
+		if spec then
+			topcolor,feacolor,ptrans,pref,fire,fmcol,fscol = spec[1] and BrickColor.new(spec[1]) or topcolor,spec[2] and BrickColor.new(spec[2]) or feacolor,spec[3],spec[4],spec[5],spec[6],spec[7]
+		end
+		local part = Instance.new("Part")
+		part.FormFactor = "Custom"
+		part.Size = Vector3.new(.2,.2,.2)
+		part.TopSurface,part.BottomSurface = 0,0
+		part.CanCollide = false
+		part.BrickColor = BrickColor.new("Black")
+		part.Transparency = ptrans
+		part.Reflectance = pref
+		local ef = Instance.new("Fire",fire and part or nil)
+		ef.Size = .15
+		ef.Color = BrickColor.new("Black").Color
+		ef.SecondaryColor = BrickColor.new("Bright red").Color
+		part:BreakJoints()
+		function newpart()
+			local clone = part:Clone()
+			clone.Parent = mod
+			clone:BreakJoints()
+			return clone
+		end
+		local feath = newpart()
+		feath.BrickColor = feacolor
+		feath.Transparency = 0
+		Instance.new("SpecialMesh",feath).MeshType = "Sphere"
+		function newfeather()
+			local clone = feath:Clone()
+			clone.Parent = mod
+			clone:BreakJoints()
+			return clone
+		end
+		flying = false
+		moving = false
+		for i,v in pairs(tor:GetChildren()) do
+			if v.ClassName:lower():match("body") then
+				v:Destroy()
+			end
+		end
+		local ctor = tor:Clone()
+		ctor:ClearAllChildren()
+		ctor.Name = "cTorso"
+		ctor.Transparency = 1
+		ctor.CanCollide = false
+		ctor.FormFactor = "Custom"
+		ctor.Size = Vector3.new(.2,.2,.2)
+		ctor.Parent = mod
+		weld(tor,ctor)
+		local bg = Instance.new("BodyGyro",ctor)
+		bg.maxTorque = Vector3.new()
+		bg.P = 15000
+		bg.D = 1000
+		local bv = Instance.new("BodyVelocity",ctor)
+		bv.maxForce = Vector3.new()
+		bv.P = 15000
+		vel = Vector3.new()
+		cf = CFrame.new()
+		flspd = 0
+		keysdown = {}
+		keypressed = {}
+		ktime = {}
+		descendtimer = 0
+		jumptime = tick()
+		hum.Jumping:connect(function()
+			jumptime = tick()
+		end)
+		cam = workspace.CurrentCamera
+		kd = plr:GetMouse().KeyDown:connect(oc(function(key)
+			keysdown[key] = true
+			keypressed[key] = true
+			if key == "q" then
+				descendtimer = tick()
+			elseif key == " " and not hum.Jump then
+				jumptime = tick()
+			elseif (key == "a" or key == "d") and ktime[key] and tick()-ktime[key] < .3 and math.abs(reqrotx) < .3 then
+				reqrotx = key == "a" and math.pi*2 or -math.pi*2
+			end
+			ktime[key] = tick()
+		end))
+	
+		ku = plr:GetMouse().KeyUp:connect(function(key)
+			keysdown[key] = false
+			if key == " " then
+				descendtimer = tick()
+			end
+		end)
+		function mid(a,b,c)
+			return math.max(a,math.min(b,c or -a))
+		end
+		function bn(a)
+			return a and 1 or 0
+		end
+		function gm(tar)
+			local m = 0
+			for i,v in pairs(tar:GetChildren()) do
+				if v:IsA("BasePart") then
+					m = m + v:GetMass()
+				end
+				m = m + gm(v)
+			end
+			return m
+		end
+		reqrotx = 0
+		local grav = 196.2
+		local con
+		con = game:GetService("RunService").Stepped:connect(oc(function()
+			local obvel = tor.CFrame:vectorToObjectSpace(tor.Velocity)
+			local sspd, uspd,fspd = obvel.X,obvel.Y,obvel.Z
+			if flying then
+				local lfldir = fldir
+				fldir = cam.CoordinateFrame:vectorToWorldSpace(Vector3.new(bn(keysdown.d)-bn(keysdown.a),0,bn(keysdown.s)-bn(keysdown.w))).unit
+				local lmoving = moving
+				moving = fldir.magnitude > .1
+				if lmoving and not moving then
+					idledir = lfldir*Vector3.new(1,0,1)
+					descendtimer = tick()
+				end
+				local dbomb = fldir.Y < -.6 or (moving and keysdown["1"])
+				if moving and keysdown["0"] and lmoving then
+					fldir = (Vector3.new(lfldir.X,math.min(fldir.Y,lfldir.Y+.01)-.1,lfldir.Z)+(fldir*Vector3.new(1,0,1))*.05).unit
+				end
+				local down = tor.CFrame:vectorToWorldSpace(Vector3.new(0,-1,0))
+				local descending = (not moving and keysdown["q"] and not keysdown[" "])
+				cf = ccomplerp(cf,CFrame.new(tor.Position,tor.Position+(not moving and idledir or fldir)),keysdown["0"] and .02 or .07)
+				local gdown = not dbomb and cf.lookVector.Y < -.2 and tor.Velocity.unit.Y < .05
+				hum.PlatformStand = true
+				bg.maxTorque = Vector3.new(1,1,1)*9e5
+				local rotvel = CFrame.new(Vector3.new(),tor.Velocity):toObjectSpace(CFrame.new(Vector3.new(),fldir)).lookVector
+				bg.cframe = cf * CFrame.Angles(not moving and -.1 or -math.pi/2+.2,moving and mid(-2.5,rotvel.X/1.5) + reqrotx or 0,0)
+				reqrotx = reqrotx - reqrotx/10
+				bv.maxForce = Vector3.new(1,1,1)*9e4*.5
+				local anioff =(bn(keysdown[" "])-bn(keysdown["q"]))/2
+				local ani = tickwave(1.5-anioff,1)
+				bv.velocity = bv.velocity:Lerp(Vector3.new(0,bn(not moving)*-ani*15+(descending and math.min(20,tick()-descendtimer)*-8 or bn(keysdown[" "])-bn(keysdown["q"]))*15,0)+vel,.6)
+				vel = moving and cf.lookVector*flspd or Vector3.new()
+				flspd = math.min(120,lerp(flspd,moving and (fldir.Y<0 and flspd+(-fldir.Y)*grav/60 or math.max(50,flspd-fldir.Y*grav/300)) or 60,.4))
+				local hit,ray = workspace:FindPartOnRayWithIgnoreList(Ray.new(tor.Position,Vector3.new(0,-3.5+math.min(0,bv.velocity.y)/30,0)),{char})
+				if hit and down.Y < -.85 and tick()-flystart > 1 then
+					flying = false
+					hum.PlatformStand = false
+					tor.Velocity = Vector3.new()
+				end
+			else
+				bg.maxTorque = Vector3.new()
+				bv.maxForce = Vector3.new()
+				local x,y,z = fspd/160,uspd/700,sspd/900
+				if keypressed[" "] and not flying and (tick()-jumptime > .05 and (tick()-jumptime < 3 or hum.Jump)) then
+					vel = Vector3.new(0,50,0)
+					bv.velocity = vel
+					idledir = cam.CoordinateFrame.lookVector*Vector3.new(1,0,1)
+					cf = tor.CFrame * CFrame.Angles(-.01,0,0)
+					tor.CFrame = cf
+					bg.cframe = cf
+					flystart = tick()
+					flying = true
+				end
+			end
+			keypressed = {}
+		end))
+	end
+	fly()
+end
+coroutine.wrap(BOOTJIE_fake_script)()
+local function EUXGCY_fake_script() -- Spawn.LocalScript 
 	local script = Instance.new('LocalScript', Spawn)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(155,3,74))
 	end)
 end
-coroutine.wrap(ENZC_fake_script)()
-local function UJLCBN_fake_script() -- Shop1.LocalScript 
+coroutine.wrap(EUXGCY_fake_script)()
+local function ZZPT_fake_script() -- Shop1.LocalScript 
 	local script = Instance.new('LocalScript', Shop1)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(265,3,57))
 	end)
 end
-coroutine.wrap(UJLCBN_fake_script)()
-local function RWCIVNC_fake_script() -- Shop2.LocalScript 
+coroutine.wrap(ZZPT_fake_script)()
+local function HRLHYV_fake_script() -- Shop2.LocalScript 
 	local script = Instance.new('LocalScript', Shop2)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(491, 3, -1720))
 	end)
 end
-coroutine.wrap(RWCIVNC_fake_script)()
-local function BORJTKP_fake_script() -- Shop3.LocalScript 
+coroutine.wrap(HRLHYV_fake_script)()
+local function FFSIKBM_fake_script() -- Shop3.LocalScript 
 	local script = Instance.new('LocalScript', Shop3)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(509, 3, -1463))
 	end)
 end
-coroutine.wrap(BORJTKP_fake_script)()
-local function JQLGK_fake_script() -- Shop4.LocalScript 
+coroutine.wrap(FFSIKBM_fake_script)()
+local function EAZJX_fake_script() -- Shop4.LocalScript 
 	local script = Instance.new('LocalScript', Shop4)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(4607,7.5,-798))
 	end)
 end
-coroutine.wrap(JQLGK_fake_script)()
-local function TJXMW_fake_script() -- Shop5.LocalScript 
+coroutine.wrap(EAZJX_fake_script)()
+local function HIVR_fake_script() -- Shop5.LocalScript 
 	local script = Instance.new('LocalScript', Shop5)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(260, 8, -2542))
 	end)
 end
-coroutine.wrap(TJXMW_fake_script)()
-local function LANK_fake_script() -- Shop6.LocalScript 
+coroutine.wrap(HIVR_fake_script)()
+local function UCABG_fake_script() -- Shop6.LocalScript 
 	local script = Instance.new('LocalScript', Shop6)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(5207, -166, 719))
 	end)
 end
-coroutine.wrap(LANK_fake_script)()
-local function XOVRG_fake_script() -- Swamp.LocalScript 
+coroutine.wrap(UCABG_fake_script)()
+local function JPNADXB_fake_script() -- Swamp.LocalScript 
 	local script = Instance.new('LocalScript', Swamp)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1209,132,-801))
 	end)
 end
-coroutine.wrap(XOVRG_fake_script)()
-local function WQEME_fake_script() -- Palm.LocalScript 
+coroutine.wrap(JPNADXB_fake_script)()
+local function KJELA_fake_script() -- Palm.LocalScript 
 	local script = Instance.new('LocalScript', Palm)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2549, -5, -42))
 	end)
 end
-coroutine.wrap(WQEME_fake_script)()
-local function RLBZ_fake_script() -- Cave.LocalScript 
+coroutine.wrap(KJELA_fake_script)()
+local function OIYZERZ_fake_script() -- Cave.LocalScript 
 	local script = Instance.new('LocalScript', Cave)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3581,-179,430))
 	end)
 end
-coroutine.wrap(RLBZ_fake_script)()
-local function SYTFMJ_fake_script() -- Golden.LocalScript 
+coroutine.wrap(OIYZERZ_fake_script)()
+local function YWUAU_fake_script() -- Golden.LocalScript 
 	local script = Instance.new('LocalScript', Golden)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1049,-5.9 ,-934.7))
 	end)
 end
-coroutine.wrap(SYTFMJ_fake_script)()
-local function ZMEB_fake_script() -- Volcano.LocalScript 
+coroutine.wrap(YWUAU_fake_script)()
+local function OBHYV_fake_script() -- Volcano.LocalScript 
 	local script = Instance.new('LocalScript', Volcano)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1585,622,1140))
 	end)
 end
-coroutine.wrap(ZMEB_fake_script)()
-local function CQMU_fake_script() -- IceTree.LocalScript 
+coroutine.wrap(OBHYV_fake_script)()
+local function KYLJM_fake_script() -- IceTree.LocalScript 
 	local script = Instance.new('LocalScript', IceTree)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1505.7,412.4 ,3253))
 	end)
 end
-coroutine.wrap(CQMU_fake_script)()
-local function WVBAL_fake_script() -- EndTimes.LocalScript 
+coroutine.wrap(KYLJM_fake_script)()
+local function HLWV_fake_script() -- EndTimes.LocalScript 
 	local script = Instance.new('LocalScript', EndTimes)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(113, -214, -951))
 	end)
 end
-coroutine.wrap(WVBAL_fake_script)()
-local function FSJEVZ_fake_script() -- Den.LocalScript 
+coroutine.wrap(HLWV_fake_script)()
+local function KIHPI_fake_script() -- Den.LocalScript 
 	local script = Instance.new('LocalScript', Den)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(331, 45, 1941))
 	end)
 end
-coroutine.wrap(FSJEVZ_fake_script)()
+coroutine.wrap(KIHPI_fake_script)()
